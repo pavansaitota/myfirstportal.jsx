@@ -1,0 +1,85 @@
+/* --- Global Body Layout Fix (CRUCIAL) --- */
+/* This overrides the default Vite/global body styles that center the content */
+body {
+  margin: 0;
+  padding: 0;
+  /* Reset the centering styles */
+  display: block !important;
+  min-height: auto !important;
+  /* Use a proper background color for the main page content */
+  background-color: #ffffff; 
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* --- Header Styles --- */
+.App-header {
+  background-color: #282c34; /* Dark background */
+  padding: 10px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure it spans the full width */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Logo on left, Nav on right */
+  align-items: center; /* Vertically centers the items */
+  max-width: 1200px;
+  margin: 0 auto; /* Centers content within the header's dark bar */
+}
+
+/* --- Logo and Title Styles --- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Force colors and remove default link underline (if it were an 'a' tag) */
+.logo text {
+  color: skyblue !important; /* Forces color over global styles */
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1px;
+}
+
+/* --- Navigation Link Styles --- */
+#nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#nav a {
+  /* Overrides global 'a' styles (color: #646cff) */
+  color: white !important; 
+  text-decoration: none !important; /* Remove underline */
+  font-size: 18px;
+  padding: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+#nav a:hover {
+  color: skyblue !important;
+}
+
+/* --- Page Content Styles (Example for Home Page) --- */
+/* Assuming your pages render content outside the header */
+.page-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 30px;
+}
+
+.page-content h1 {
+  /* Resets the h1 color from the global styles if needed */
+  color: #213547; 
+  font-size: 3.2em;
+  line-height: 1.1;
+}
